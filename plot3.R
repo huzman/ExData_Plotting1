@@ -1,0 +1,10 @@
+png(filename="plot3.png", width=480, height=480, units = "px")
+plot(dataset_sub$DateTime, dataset_sub$SubMetering1, type="l", ylab="Energy sub metering", xlab="", ylim=c(0,theMax))
+par(new=T)
+plot(dataset_sub$DateTime, dataset_sub$SubMetering2, type="l", ylab="Energy sub metering", xlab="", col="red", ylim=c(0,theMax))
+par(new=T)
+plot(dataset_sub$DateTime, dataset_sub$SubMetering3, type="l", ylab="Energy sub metering", xlab="", col="blue", ylim=c(0,theMax))
+par(new=T)
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lwd=1)
+
+dev.off()
